@@ -9,23 +9,26 @@ const Navbar = () => {
           <BsFillCartFill size="2rem" />
         </div>
         <div className="hidden md:flex space-x-14 ">
-          <a href="#" className="hover:text-neutral-500">
+          <a href="http://localhost:3000/" className="hover:text-neutral-500">
             Pricing
           </a>
-          <a href="#" className="hover:text-neutral-500">
+          <a href="http://localhost:3000/" className="hover:text-neutral-500">
             Pricing
           </a>
-          <a href="#" className="hover:text-neutral-500">
+          <a href="http://localhost:3000/" className="hover:text-neutral-500">
             Pricing
           </a>
-          <a href="#" className="hover:text-neutral-500">
+          <a href="http://localhost:3000/" className="hover:text-neutral-500">
             Pricing
           </a>
-          <a href="#" className="hover:text-neutral-500">
+          <a href="http://localhost:3000/" className="hover:text-neutral-500">
             Pricing
           </a>
         </div>
-        <a className="p-3 px-10 pt-2 text-white bg-red-500 rounded-full hover:pointer ">
+        <a
+          href="http://localhost:3000/"
+          className="p-3 px-10 pt-2 text-white bg-red-500 rounded-full hover:pointer "
+        >
           Button
         </a>
       </div>
