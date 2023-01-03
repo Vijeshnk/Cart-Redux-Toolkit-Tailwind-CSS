@@ -29,7 +29,7 @@ const CartContainer = () => {
       </div>
       <footer>
         <hr />
-        <h4>Total &#8377; {total} </h4>
+        <h4>Total &#8377; {total.toFixed(2)} </h4>
         <button
           onClick={() => dispatch(clearCart())}
           className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"

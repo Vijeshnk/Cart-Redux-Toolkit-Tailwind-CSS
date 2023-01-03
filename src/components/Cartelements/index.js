@@ -1,6 +1,6 @@
 import React from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
-import { removeItem } from "../../features/cart/cartSlice";
+import { removeItem, increase, decrease } from "../../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
 
 const CartElements = ({ img, title, price, amount, id }) => {
@@ -10,12 +10,24 @@ const CartElements = ({ img, title, price, amount, id }) => {
       <div className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
         <div href="#" className="flex justify-evenly ...">
           <img className="p-8 rounded-t-lg h-40" src={img} alt={title} />
-          <button>
+          <button
+            onClick={() => {
+              if (amount === 1) {
+                dispatch(removeItem(id));
+                return;
+              }
+              dispatch(decrease({ id }));
+            }}
+          >
             {" "}
             <BsChevronDown />
           </button>
           <p>{amount}</p>
-          <button>
+          <button
+            onClick={() => {
+              dispatch(increase({ id }));
+            }}
+          >
             <BsChevronUp />
           </button>
         </div>
