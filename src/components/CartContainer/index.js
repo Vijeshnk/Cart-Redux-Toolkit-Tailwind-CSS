@@ -2,6 +2,7 @@ import React from "react";
 import Cartelements from "../Cartelements/index";
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../../features/cart/cartSlice";
+import { openModal } from "../../features/modal/modalSlice";
 
 const CartContainer = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const CartContainer = () => {
         <hr />
         <h4>Total &#8377; {total.toFixed(2)} </h4>
         <button
-          onClick={() => dispatch(clearCart())}
+          onClick={() => dispatch(openModal())}
           className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
         >
           Clear Cart
